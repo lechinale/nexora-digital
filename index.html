@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criação de Sites Profissionais</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero {
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: #25d366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.step {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 8px;
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.option {
+    background: #eee;
+    padding: 12px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.option:hover {
+    background: #ddd;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ETAPA 1 -->
+<section class="hero">
+    <h1>Seu negócio precisa de mais clientes?</h1>
+    <p>Crio sites simples e rápidos para gerar vendas todos os dias.</p>
+    <button class="btn" onclick="nextStep(1)">Quero vender mais</button>
+</section>
+
+<!-- ETAPA 2 -->
+<section class="step" id="step1">
+    <h2>O que você precisa?</h2>
+
+    <div class="option" onclick="selectService('Landing Page')">
+        🚀 Landing Page para vender mais
+    </div>
+
+    <div class="option" onclick="selectService('Site institucional')">
+        🏢 Site institucional
+    </div>
+
+    <div class="option" onclick="selectService('Manutenção')">
+        🔧 Manutenção / Ajustes
+    </div>
+</section>
+
+<!-- ETAPA 3 -->
+<section class="step" id="step2">
+    <h2>Informe seus dados</h2>
+
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="text" id="whats" placeholder="Seu WhatsApp" required>
+    <textarea id="mensagem" placeholder="Conte rapidamente o que precisa"></textarea>
+
+    <button class="btn" onclick="enviarWhats()">Enviar agora</button>
+</section>
+
+<footer>
+    <p>© 2025 - WebSimples</p>
+</footer>
+
+<script>
+let servicoEscolhido = "";
+
+function nextStep(step) {
+    document.getElementById("step" + step).classList.add("active");
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
+function selectService(servico) {
+    servicoEscolhido = servico;
+    document.getElementById("step2").classList.add("active");
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
+function enviarWhats() {
+    const nome = document.getElementById("nome").value;
+    const whats = document.getElementById("whats").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const texto = `
+Olá! Me chamo ${nome}.
+Tenho interesse em: ${servicoEscolhido}.
+Meu WhatsApp: ${whats}
+
+Mensagem:
+${mensagem}
+    `;
+
+    const numero = "5599999999999"; // <<< COLOQUE SEU NÚMERO AQUI
+
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(link, "_blank");
+}
+</script>
+
+</body>
+</html>
