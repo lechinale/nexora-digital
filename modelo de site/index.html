@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Nexora Digital | Atendimento Rápido</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-123456789"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-123456789');
+    </script>
+
+
+</head>
+<body>
+
+<header>
+  <h1>Atendimento Rápido</h1>
+  <p>Solicite agora e fale direto no WhatsApp</p>
+</header>
+
+<section class="form-container">
+  <h2>Solicitação</h2>
+
+  <form id="formWhats">
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="tel" id="telefone" placeholder="Seu telefone" required>
+
+    <select id="servico" required>
+      <option value="">Selecione o serviço</option>
+      <option>Lava Car - Lavagem Completa</option>
+      <option>Pizzaria - Pedido</option>
+      <option>Restaurante - Reserva</option>
+      <option>Orçamento</option>
+    </select>
+
+    <textarea id="mensagem" placeholder="Mensagem (opcional)"></textarea>
+
+    <button type="submit">Enviar no WhatsApp</button>
+  </form>
+</section>
+
+<a href="https://wa.me/5500000000000"
+   onclick="gtag('event','conversion',{'send_to':'AW-123456789/AbCDefGhIJ'})"
+   class="btn">
+   Falar no WhatsApp
+</a>
+
+
+<footer>
+  <p>© Nexora Digital</p>
+</footer>
+
+
+</body>
+</html>
