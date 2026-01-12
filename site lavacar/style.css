@@ -123,6 +123,18 @@ section h2::after {
 }
 
 /* SERVIÇOS */
+
+#servicos {
+  background-color: #f9f9f9;
+  background-image: radial-gradient( rgba(0,0,0,0.03) 1px,transparent 1px);
+  background-size: 20px 20px;
+}
+
+.servico:hover {
+  transform: translateY(-6px);
+}
+
+
 .servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
