@@ -2,7 +2,7 @@ const menuToggle = document.getElementById("menuToggle");
 const menu = document.getElementById("menu");
 const leadForm = document.getElementById("leadForm");
 
-const WHATSAPP_NUMBER = "5514999999999"; // Troque pelo WhatsApp oficial da Nexora
+const WHATSAPP_NUMBER = "5514998029757"; // Troque pelo WhatsApp oficial da Nexora
 
 menuToggle.addEventListener("click", () => {
   menu.classList.toggle("active");
