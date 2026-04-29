@@ -1,0 +1,42 @@
+<svg width="520" height="150" viewBox="0 0 520 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nexoraGradient" x1="20" y1="20" x2="170" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.48" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="195" y1="83" x2="360" y2="83" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.20 0 0 0 0 0.50 0 0 0 0 1 0 0 0 0.65 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="520" height="150" rx="26" fill="#050816"/>
+
+  <g filter="url(#softGlow)">
+    <path d="M36 118V32C36 26.4772 40.4772 22 46 22H62.5C65.7 22 68.7 23.53 70.58 26.11L126 102V32C126 26.4772 130.477 22 136 22H152C157.523 22 162 26.4772 162 32V118C162 123.523 157.523 128 152 128H135.8C132.59 128 129.57 126.46 127.69 123.86L72 47.3V118C72 123.523 67.5228 128 62 128H46C40.4772 128 36 123.523 36 118Z" fill="url(#nexoraGradient)"/>
+    <circle cx="33" cy="50" r="7" fill="#22D3EE"/>
+    <circle cx="33" cy="75" r="7" fill="#22D3EE"/>
+    <circle cx="33" cy="112" r="7" fill="#2563EB"/>
+    <circle cx="76" cy="66" r="7" fill="#22D3EE"/>
+    <circle cx="76" cy="96" r="7" fill="#2563EB"/>
+    <path d="M33 50V112M33 75L76 66M33 75L76 96M33 112L76 96M76 66V96" stroke="#22D3EE" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <text x="195" y="75" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="45" font-weight="800" letter-spacing="4">NE</text>
+    <text x="284" y="75" fill="url(#textGradient)" font-family="Arial, sans-serif" font-size="45" font-weight="900" letter-spacing="4">X</text>
+    <text x="330" y="75" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="45" font-weight="800" letter-spacing="4">ORA</text>
+    <line x1="195" y1="109" x2="252" y2="109" stroke="#22D3EE" stroke-width="4" stroke-linecap="round"/>
+    <text x="275" y="117" fill="#8B5CF6" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="18">DIGITAL</text>
+    <line x1="463" y1="109" x2="505" y2="109" stroke="#A855F7" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
